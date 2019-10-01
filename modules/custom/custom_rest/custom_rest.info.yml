@@ -1,0 +1,4 @@
+name: Custom rest api
+description:  Custom rest api implementation
+type: module
+core: 8.x

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: gallery_image_styp
+label: 'Gallery Image Style'
+effects:
+  d5255ddf-807b-4dd1-86a3-55adc3264875:
+    uuid: d5255ddf-807b-4dd1-86a3-55adc3264875
+    id: image_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

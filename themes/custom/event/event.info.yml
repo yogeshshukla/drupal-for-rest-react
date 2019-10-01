@@ -1,0 +1,14 @@
+name: Event Management
+type: theme
+descrption: This is Event Management theme
+core: 8.x
+
+libraries:
+  - event/bootstrap
+  - event/global-styling
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  content: 'Content'
+  footer: 'Footer'

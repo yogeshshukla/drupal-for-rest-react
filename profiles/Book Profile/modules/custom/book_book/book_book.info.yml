@@ -1,0 +1,13 @@
+name: Book
+description: 'Provides Book content type and related configuration. This is book content type'
+type: module
+core: 8.x
+dependencies:
+  - content_translation
+  - entity_reference_revisions
+  - field
+  - language
+  - node
+  - paragraphs
+  - path
+package: Book

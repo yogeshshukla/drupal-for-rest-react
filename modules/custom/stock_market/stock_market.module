@@ -1,0 +1,26 @@
+<?php
+
+function stock_market_cron() {
+	$custom_blocks = \Drupal::entityQuery( 'block_content' )->condition( 'type', 'stock_exchange_rate_card' )->execute();
+	if ( isset( $custom_blocks ) && count( $custom_blocks ) > 0 ) {
+		foreach ( $custom_blocks as $custom_block ) {
+			$block  = \Drupal\block_content\Entity\BlockContent::load( $custom_block );
+			$symbol = $block->get( 'field_symbol' )->value;
+
+			try {
+				$client   = \Drupal::httpClient();
+				$response = $client->request( 'GET', 'http://dev.markitondemand.com/MODApis/Api/v2/Quote/json?symbol=' . $symbol );
+				$data     = json_decode( $response->getBody() );
+				if ( $data ) {
+					$block->set( 'field_last_price', $data->LastPrice )
+					->set( 'field_change', $data->Change )
+					->save();
+				}
+			} catch ( customException $e ) {
+				// display custom message
+				echo $e->errorMessage();
+			}
+		}
+	}
+
+}

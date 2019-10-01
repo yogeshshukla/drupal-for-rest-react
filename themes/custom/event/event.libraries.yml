@@ -1,0 +1,25 @@
+global-styling:
+  css:
+    theme:
+      css/church.css: {}
+      css/fancybox.css: {}
+      http://fonts.googleapis.com/css?family=Montserrat:400,700: { type: external, minified: true }
+      http://fonts.googleapis.com/css?family=Droid+Serif:400,700: { type: external, minified: true }
+  js:
+    js/owl.carousel.min.js: {}
+    js/ketchup.all.js: {}
+    js/fancybox.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+
+bootstrap:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+     
+  js:
+    js/bootstrap.min.js: {}
+    
+  dependencies:
+    - core/jquery

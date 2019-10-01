@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_media
+label: 'Social Media'
+icon_uuid: null
+description: 'Social Media'
+behavior_plugins: {  }
